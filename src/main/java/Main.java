@@ -1,6 +1,6 @@
 package main.java;
 
-public class Main { // hello
+public class Main { // hello testing
 
     public static void main(String[] args){
            int x=2;
