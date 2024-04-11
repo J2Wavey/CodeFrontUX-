@@ -1,4 +1,4 @@
-package main.java.gui;
+package main.java.fhgui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -31,7 +31,7 @@ public class MainMenuController {
      * @throws IOException - thrown if the fxml cannot be found
      */
     public void logout(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/fhgui/LoginPage.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -45,7 +45,7 @@ public class MainMenuController {
      * @throws IOException - thrown if the fxml cannot be found
      */
     public void ordersScene(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Orders.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/fhgui/Orders.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -59,7 +59,7 @@ public class MainMenuController {
      * @throws IOException - thrown if the fxml cannot be found
      */
     public void tablesScene(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Tables.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/fhgui/Tables.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -73,7 +73,7 @@ public class MainMenuController {
      * @throws IOException - thrown if the fxml cannot be found
      */
     public void bookingsScene(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Bookings.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/fhgui/Bookings.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

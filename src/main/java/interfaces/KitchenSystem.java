@@ -1,5 +1,8 @@
 package main.java.interfaces;
 
+import main.java.models.DetailsOnOrderPreparation;
+import main.java.models.OrderDetails;
+
 import java.time.LocalDate;
 import java.util.List;
 

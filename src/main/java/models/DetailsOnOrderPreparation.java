@@ -1,4 +1,4 @@
-package main.java.interfaces;/*
+package main.java.models;/*
 This class provides the kitchen with information on the sequence in which to prepare
 the dish.
 

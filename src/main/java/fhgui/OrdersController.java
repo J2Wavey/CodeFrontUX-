@@ -1,4 +1,4 @@
-package main.java.gui;
+package main.java.fhgui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -28,7 +28,7 @@ public class OrdersController {
      * @exception IOException - thrown if the fxml cannot be loaded.
      */
     public void menuReturn(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/fhgui/MainMenu.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

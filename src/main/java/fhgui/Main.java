@@ -1,4 +1,4 @@
-package main.java.gui;
+package main.java.fhgui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +16,7 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage mainStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/fhgui/LoginPage.fxml"));
         Scene scene = new Scene(root);
         mainStage.setTitle("Lancaster's");
         mainStage.setScene(scene);

@@ -1,4 +1,4 @@
-package main.java.interfaces;/*
+package main.java.models;/*
 This supporting class is essential to communicate dietary restrictions or any allegeries
 with specific dishes. This aids  the kitchen team to avoid any cross contamination, ensuring
 the safety of the customer.

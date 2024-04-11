@@ -1,11 +1,12 @@
 package main.java;
 
+import main.java.database.DBUtil;
+
 public class Main { // hello testing
 
-    public static void main(String[] args){
-           int x=2;
-
-           for (int kk=0;kk<=x; kk++) System.out.print("  " + kk);
+    // In your main method or wherever you want to test the connection
+    public static void main(String[] args) {
 
     }
+
 }

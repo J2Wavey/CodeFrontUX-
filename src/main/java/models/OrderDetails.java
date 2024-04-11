@@ -1,4 +1,4 @@
-package main.java.interfaces;/*
+package main.java.models;/*
 This is the central class when it comes to managing information about each individual
 order. This class includes details such as, which dishes are ordered, their allergies.
 This is a vital class, for coordinating the kitchen preparation and ensuring that all customer
