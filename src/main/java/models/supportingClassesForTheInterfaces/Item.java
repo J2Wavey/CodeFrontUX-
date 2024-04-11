@@ -1,4 +1,4 @@
-package main.java.models;/*
+package main.java.models.supportingClassesForTheInterfaces;/*
 This class is to represent individual menu items within an order, this class
 includes details such as, name of the dish, quantity and any special instructions
 from the customer. This is very important for the kitchen to understand what exactly

@@ -1,7 +1,7 @@
 package main.java.interfaces;
 
-import main.java.models.DetailsOnOrderPreparation;
-import main.java.models.OrderDetails;
+import main.java.models.supportingClassesForTheInterfaces.DetailsOnOrderPreparation;
+import main.java.models.supportingClassesForTheInterfaces.OrderDetails;
 
 import java.time.LocalDate;
 import java.util.List;

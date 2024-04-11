@@ -69,6 +69,7 @@ public class DBUtil {
     }
 
     public static void testInsert() {
+
         String sql = "INSERT INTO StaffMember (StaffForename, StaffSurname) VALUES (?, ?)";
         try (Connection conn = getConnection();
              PreparedStatement statementWhichIsPrepared = conn.prepareStatement(sql)) {

@@ -1,6 +1,6 @@
 package main.java.interfaces;
 
-import main.java.models.BookingDetails;
+import main.java.models.supportingClassesForTheInterfaces.BookingDetails;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
