@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.fhgui.TablesController">
+   <children>
+      <AnchorPane layoutX="165.0" layoutY="91.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="120.0" prefWidth="120.0" style="-fx-border-color: orange; -fx-border-width: 6px;">
+               <children>
+                  <ImageView fitHeight="108.0" fitWidth="108.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../css/Lancasters-logos.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="120.0" prefHeight="120.0" prefWidth="680.0" style="-fx-background-color: #2b3336;">
+               <children>
+                  <Label layoutX="35.0" layoutY="31.0" text="Table Layout" textFill="#ffe7b4">
+                     <font>
+                        <Font name="Century" size="46.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutY="120.0" prefHeight="481.0" prefWidth="120.0" style="-fx-background-color: #2b3336;">
+               <children>
+                  <Hyperlink fx:id="menuReturnButton" layoutX="30.0" layoutY="388.0" onAction="#menuReturn" text="Back" textFill="#fc8b35" underline="true">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </Pane>
+            <AnchorPane layoutX="120.0" layoutY="120.0" prefHeight="481.0" prefWidth="680.0">
+               <children>
+                  <Button fx:id="changeTableLayoutButton" layoutX="14.0" layoutY="426.0" mnemonicParsing="false" onAction="#setTableLayout" prefHeight="41.0" prefWidth="139.0" text="Change Table Layout" />
+                  <TextArea layoutX="30.0" layoutY="30.0" prefHeight="344.0" prefWidth="516.0" text="[To be developed]&#10;&#10;In this page, a diagram of the table layout will be displayed.&#10;The button at the bottom, &quot;Change Table Layout&quot; will allow&#10;the user to add or remove tables.&#10;Tables will be marked depending on whether they are booked&#10;or not, as well as if they have any pending orders. Clicking on&#10;them will display details such as the type of booking, which&#10;can either be a walk-in or a reservation (a reservation will have&#10;a reserved time associated with the table).">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

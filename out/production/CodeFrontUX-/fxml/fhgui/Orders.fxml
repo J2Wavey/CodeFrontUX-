@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: orange; -fx-border-width: 2; -fx-background-color: linear-gradient(to top, #4D4D4D, #FFFFFF);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.fhgui.OrdersController">
+   <children>
+      <AnchorPane layoutX="165.0" layoutY="91.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="120.0" prefWidth="120.0" style="-fx-border-color: orange; -fx-border-width: 6px;">
+               <children>
+                  <ImageView fitHeight="108.0" fitWidth="108.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../css/Lancasters-logos.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="120.0" prefHeight="120.0" prefWidth="680.0" style="-fx-background-color: #2b3336;">
+               <children>
+                  <Label layoutX="35.0" layoutY="31.0" text="Orders" textFill="#ffe7b4">
+                     <font>
+                        <Font name="Century" size="46.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutY="120.0" prefHeight="481.0" prefWidth="120.0" style="-fx-background-color: #2b3336;">
+               <children>
+                  <Hyperlink fx:id="BackButton" layoutX="31.0" layoutY="388.0" onAction="#menuReturn" text="Back" textFill="#fc8b35" underline="true">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </Pane>
+            <AnchorPane layoutX="120.0" layoutY="120.0" prefHeight="481.0" prefWidth="680.0">
+               <children>
+                  <Button fx:id="manageOrdersButton" layoutX="28.0" layoutY="431.0" mnemonicParsing="false" onAction="#showingOFManageForm" prefHeight="12.0" prefWidth="108.0" style="-fx-border-color: orange;" text="Manage Orders" />
+                  <TableView fx:id="ordersTable" layoutX="213.0" layoutY="51.0" prefHeight="379.0" prefWidth="312.0" style="-fx-border-color: orange;">
+                    <columns>
+                      <TableColumn fx:id="orderIdColumn" prefWidth="75.0" text="OrderID" />
+                        <TableColumn fx:id="statusColumn" prefWidth="75.0" text="Status" />
+                        <TableColumn fx:id="dishNameColumn" prefWidth="75.0" text="DishName" />
+                        <TableColumn fx:id="TableNumberColumn" minWidth="15.0" prefWidth="100.0" text="TableNumber" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="addButton" layoutX="28.0" layoutY="23.0" mnemonicParsing="false" onAction="#handlingOfAddOrderPaneForm" prefHeight="26.0" prefWidth="97.0" text="Add" />
+                  <Pane fx:id="addingNewOrderFormPane" layoutY="14.0" prefHeight="206.0" prefWidth="210.0" style="-fx-border-color: orange;" visible="false">
+                     <children>
+                        <TextField fx:id="tableNumberField" layoutX="14.0" layoutY="50.0" promptText="Enter TableNumber Here " />
+                        <ComboBox fx:id="comboBoxForDishName" layoutX="13.0" layoutY="91.0" prefWidth="150.0" promptText="Select Dish From Here" />
+                        <ComboBox fx:id="comboBoxForStatusOfOrder" layoutX="13.0" layoutY="139.0" prefWidth="150.0" promptText="Status Of Order" />
+                        <Button fx:id="cancelButton" layoutX="149.0" layoutY="180.0" mnemonicParsing="false" onAction="#handlingOfClosingAddOrderForm" text="Close" />
+                        <Spinner fx:id="quantitySpinner" editable="true" layoutX="163.0" layoutY="91.0" prefHeight="10.0" prefWidth="45.0" />
+                        <Button fx:id="handilingofThePlacedOrder" layoutY="180.0" mnemonicParsing="false" onAction="#handilingofThePlacedOrder" text="Order" />
+                     </children>
+                  </Pane>
+                  <Button fx:id="removeButton" layoutX="567.0" layoutY="431.0" mnemonicParsing="false" onAction="#showingRemoveOrderForm" prefHeight="26.0" prefWidth="98.0" text="Remove" />
+                  <Button fx:id="editButton" layoutX="576.0" layoutY="23.0" mnemonicParsing="false" onAction="#showingEditPaneForm" prefHeight="26.0" prefWidth="90.0" text="Edit" />
+                  <Pane fx:id="removeOrderPane" layoutX="525.0" layoutY="230.0" prefHeight="200.0" prefWidth="147.0" visible="false">
+                     <children>
+                        <TextField fx:id="orderIDTextFieldForRemove" layoutY="88.0" prefHeight="25.0" prefWidth="147.0" promptText="Enter OrderID to Remove" />
+                        <Button fx:id="confirmRemoveButton" layoutX="95.0" layoutY="134.0" mnemonicParsing="false" onAction="#handlingConfirmForRemove" text="Confirm" />
+                        <Button fx:id="cancelRemoveButton" layoutY="134.0" mnemonicParsing="false" onAction="#handlingOfClosingRemoveOrderForm" text="Close" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="manageOrderPane" layoutX="6.0" layoutY="230.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+                     <children>
+                        <TextField fx:id="orderIdTextFieldForManage" layoutX="14.0" layoutY="47.0" promptText="Enter OrderID to Manage" />
+                        <ComboBox fx:id="orderStatusComboBoxForManage" layoutX="13.0" layoutY="100.0" prefWidth="150.0" promptText="Update Status " />
+                        <Button fx:id="confirmManageButton" layoutX="137.0" layoutY="161.0" mnemonicParsing="false" onAction="#confirmButtonFunctionality" text="Confirm" />
+                        <Button fx:id="closeManageButton" layoutY="161.0" mnemonicParsing="false" onAction="#closingOfMangeForm" text="Close" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="editOrderPane" layoutX="532.0" layoutY="14.0" prefHeight="223.0" prefWidth="147.0" visible="false">
+                     <children>
+                        <TextField fx:id="editOrderIdTextField" layoutX="4.0" layoutY="42.0" prefHeight="26.0" prefWidth="139.0" promptText="Enter OrderID" />
+                        <ComboBox fx:id="editDishComboBox" layoutX="2.0" layoutY="87.0" prefHeight="25.0" prefWidth="147.0" promptText="Edit Dish" />
+                        <TextField fx:id="editTableNumberField" layoutX="6.0" layoutY="140.0" prefHeight="25.0" prefWidth="139.0" promptText="Enter TableNumber" />
+                        <Button fx:id="confirmEditButton" layoutX="91.0" layoutY="184.0" mnemonicParsing="false" onAction="#handlinfConfirmForEdit" text="Confirm" />
+                        <Button fx:id="closeEditButton" layoutX="4.0" layoutY="184.0" mnemonicParsing="false" onAction="#closingOfEditForm" text="Close" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
