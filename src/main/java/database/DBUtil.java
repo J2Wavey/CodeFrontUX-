@@ -11,8 +11,8 @@ public class DBUtil {
    // private static final String DATABASE_URL = "jdbc:mysql://server.smcs-stuproj00.city.ac.uk:3306/in2033t25";
    private static final String DATABASE_URL = "jdbc:mysql://smcse-stuproj00.city.ac.uk:3306/in2033t25";
 
-    private static final String USERNAME = "in2033t25_d";
-    private static final String PASSWORD = "3QvAOwhLS40";
+    private static final String USERNAME = "in2033t25_a";
+    private static final String PASSWORD = "6Wv5Xz-mxrs";
 
 
     static {
