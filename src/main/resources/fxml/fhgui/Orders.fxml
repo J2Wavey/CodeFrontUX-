@@ -48,22 +48,22 @@
             <AnchorPane layoutX="120.0" layoutY="120.0" prefHeight="481.0" prefWidth="680.0">
                <children>
                   <Button fx:id="manageOrdersButton" layoutX="28.0" layoutY="431.0" mnemonicParsing="false" onAction="#showingOFManageForm" prefHeight="12.0" prefWidth="108.0" style="-fx-border-color: orange;" text="Manage Orders" />
-                  <TableView fx:id="ordersTable" layoutX="213.0" layoutY="51.0" prefHeight="379.0" prefWidth="312.0" style="-fx-border-color: orange;">
+                  <TableView fx:id="ordersTable" layoutX="197.0" layoutY="51.0" prefHeight="379.0" prefWidth="321.0" style="-fx-border-color: orange;">
                     <columns>
-                      <TableColumn fx:id="orderIdColumn" prefWidth="75.0" text="OrderID" />
-                        <TableColumn fx:id="statusColumn" prefWidth="75.0" text="Status" />
-                        <TableColumn fx:id="dishNameColumn" prefWidth="75.0" text="DishName" />
-                        <TableColumn fx:id="TableNumberColumn" minWidth="15.0" prefWidth="100.0" text="TableNumber" />
+                      <TableColumn fx:id="orderIdColumn" prefWidth="68.66668701171875" text="OrderID" />
+                        <TableColumn fx:id="statusColumn" prefWidth="67.33331298828125" text="Status" />
+                        <TableColumn fx:id="dishNameColumn" prefWidth="86.66671752929688" text="DishName" />
+                        <TableColumn fx:id="TableNumberColumn" minWidth="15.0" prefWidth="108.0" text="TableNumber" />
                     </columns>
                   </TableView>
                   <Button fx:id="addButton" layoutX="28.0" layoutY="23.0" mnemonicParsing="false" onAction="#handlingOfAddOrderPaneForm" prefHeight="26.0" prefWidth="97.0" text="Add" />
-                  <Pane fx:id="addingNewOrderFormPane" layoutY="14.0" prefHeight="206.0" prefWidth="210.0" style="-fx-border-color: orange;" visible="false">
+                  <Pane fx:id="addingNewOrderFormPane" layoutY="14.0" prefHeight="206.0" prefWidth="193.0" style="-fx-border-color: orange;" visible="false">
                      <children>
-                        <TextField fx:id="tableNumberField" layoutX="14.0" layoutY="50.0" promptText="Enter TableNumber Here " />
-                        <ComboBox fx:id="comboBoxForDishName" layoutX="13.0" layoutY="91.0" prefWidth="150.0" promptText="Select Dish From Here" />
-                        <ComboBox fx:id="comboBoxForStatusOfOrder" layoutX="13.0" layoutY="139.0" prefWidth="150.0" promptText="Status Of Order" />
+                        <TextField fx:id="tableNumberField" layoutX="14.0" layoutY="50.0" prefHeight="25.0" prefWidth="139.0" promptText="Enter TableNumber Here " />
+                        <ComboBox fx:id="comboBoxForDishName" layoutX="13.0" layoutY="91.0" prefHeight="25.0" prefWidth="139.0" promptText="Select Dish From Here" />
+                        <ComboBox fx:id="comboBoxForStatusOfOrder" layoutX="13.0" layoutY="139.0" prefHeight="25.0" prefWidth="139.0" promptText="Status Of Order" />
                         <Button fx:id="cancelButton" layoutX="149.0" layoutY="180.0" mnemonicParsing="false" onAction="#handlingOfClosingAddOrderForm" text="Close" />
-                        <Spinner fx:id="quantitySpinner" editable="true" layoutX="163.0" layoutY="91.0" prefHeight="10.0" prefWidth="45.0" />
+                        <Spinner fx:id="quantitySpinner" editable="true" layoutX="149.0" layoutY="91.0" prefHeight="10.0" prefWidth="45.0" />
                         <Button fx:id="handilingofThePlacedOrder" layoutY="180.0" mnemonicParsing="false" onAction="#handilingofThePlacedOrder" text="Order" />
                      </children>
                   </Pane>
@@ -76,7 +76,7 @@
                         <Button fx:id="cancelRemoveButton" layoutY="134.0" mnemonicParsing="false" onAction="#handlingOfClosingRemoveOrderForm" text="Close" />
                      </children>
                   </Pane>
-                  <Pane fx:id="manageOrderPane" layoutX="6.0" layoutY="230.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+                  <Pane fx:id="manageOrderPane" layoutX="6.0" layoutY="230.0" prefHeight="200.0" prefWidth="187.0" visible="false">
                      <children>
                         <TextField fx:id="orderIdTextFieldForManage" layoutX="14.0" layoutY="47.0" promptText="Enter OrderID to Manage" />
                         <ComboBox fx:id="orderStatusComboBoxForManage" layoutX="13.0" layoutY="100.0" prefWidth="150.0" promptText="Update Status " />
