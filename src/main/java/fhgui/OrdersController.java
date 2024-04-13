@@ -306,10 +306,10 @@ private void handlingOfClosingRemoveOrderForm(){
 
         try{
             int idOfOrder =Integer.parseInt(orderIdTextFieldForManage.getText().trim());
-            String updatedStatus = orderStatusComboBoxForManage.getSelectionModel().getSelectedItem();
+      String updatedStatus = orderStatusComboBoxForManage.getSelectionModel().getSelectedItem();
 
             updatingTheStatusOfOrder(idOfOrder,updatedStatus);
-            manageOrderPane.setVisible(false);
+     manageOrderPane.setVisible(false);
         }catch (NumberFormatException e){
             e.printStackTrace();
             alertForError("Error in the Format", "There was an error in the way in which a field was passed ");

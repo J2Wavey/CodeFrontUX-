@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.fhgui.BookingsController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to top, #4D4D4D, #FFFFFF);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.fhgui.BookingsController">
    <children>
       <AnchorPane layoutX="165.0" layoutY="91.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -43,12 +46,41 @@
             </Pane>
             <AnchorPane layoutX="120.0" layoutY="120.0" prefHeight="481.0" prefWidth="680.0">
                <children>
-                  <Button fx:id="setBookingsButton" layoutX="14.0" layoutY="426.0" mnemonicParsing="false" onAction="#setBookings" prefHeight="41.0" prefWidth="139.0" text="Update Bookings" />
-                  <TextArea layoutX="30.0" layoutY="30.0" prefHeight="329.0" prefWidth="516.0" text="[To be developed]&#10;&#10;In this page, a list of bookings will be displayed. It will show a list&#10;of all the tables that are currently booked either by walk-ins or&#10;reservations. It will also show the time each booking has been&#10;made, as well as which table(s) it occupies.&#10;The &quot;Update Bookings&quot; button can be used to add bookings&#10;or change details of the bookings.">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </TextArea>
+                  <Button fx:id="setBookingsButton" layoutX="12.0" layoutY="429.0" mnemonicParsing="false" onAction="#whenUpdateButtonIsClickec" prefHeight="26.0" prefWidth="108.0" text="Update Bookings" />
+                  <TableView fx:id="bookingsTableView" layoutX="159.0" layoutY="51.0" prefHeight="307.0" prefWidth="379.0">
+                    <columns>
+                      <TableColumn fx:id="BookingIDColumn" prefWidth="75.0" text="BookingID" />
+                      <TableColumn fx:id="DateColumn" prefWidth="75.0" text="Date" />
+                        <TableColumn fx:id="TimeColumn" prefWidth="75.0" text="Time" />
+                        <TableColumn fx:id="CustomerPhoneNumberColumn" prefWidth="150.0" text="CustomerPhoneNumber" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="AddButton" layoutX="12.0" layoutY="25.0" mnemonicParsing="false" onAction="#showAddBookingPane" text="Add  Bookings" visible="false" />
+                  <Button fx:id="editButton" layoutX="572.0" layoutY="25.0" mnemonicParsing="false" onAction="#showHiddedEditPane" text="Edit" visible="false" />
+                  <Button fx:id="removeButton" layoutX="572.0" layoutY="416.0" mnemonicParsing="false" text="Remove " visible="false" />
+                  <Pane fx:id="addBookingsPane" layoutY="14.0" prefHeight="307.0" prefWidth="172.0" visible="false">
+                     <children>
+                        <DatePicker fx:id="datePickerBookings" layoutX="14.0" layoutY="43.0" prefHeight="12.0" prefWidth="128.0" promptText="Pick Date" />
+                        <TextField fx:id="timeInputTextField" layoutX="14.0" layoutY="75.0" prefHeight="18.0" prefWidth="128.0" promptText="Input Time" />
+                        <Button fx:id="checkAvailabilityID" layoutX="90.0" layoutY="111.0" mnemonicParsing="false" onAction="#checkAvailability" text="Check" />
+                        <TextField fx:id="textFieldForForeName" layoutX="12.0" layoutY="141.0" prefHeight="25.0" prefWidth="128.0" promptText="Enter Forename" />
+                        <TextField fx:id="FieldOftextForSureName" layoutX="12.0" layoutY="174.0" prefHeight="25.0" prefWidth="128.0" promptText="Enter Surname" />
+                        <TextField fx:id="PhoneNumberTextField" layoutX="12.0" layoutY="207.0" prefHeight="25.0" prefWidth="128.0" promptText="Enter Phone Number" />
+                        <Button fx:id="confirmBookingID" layoutX="90.0" layoutY="259.0" mnemonicParsing="false" onAction="#confirmBooking" text="Confirm" />
+                        <Button fx:id="closeBookingPane" layoutX="12.0" layoutY="259.0" mnemonicParsing="false" onAction="#closeAddBookingPane" text="Close" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="EditBookingsPane" layoutX="523.0" layoutY="14.0" prefHeight="238.0" prefWidth="150.0" visible="false">
+                     <children>
+                        <TextField fx:id="bookingIdTextFieldEdit" layoutX="22.0" layoutY="43.0" prefHeight="18.0" prefWidth="128.0" promptText="Enter BookingID" />
+                        <DatePicker fx:id="newDatePickerEdit" layoutX="22.0" layoutY="75.0" prefHeight="25.0" prefWidth="128.0" promptText="Select Date" />
+                        <TextField fx:id="newTimeTextFieldEdit" layoutX="21.0" layoutY="110.0" prefHeight="25.0" prefWidth="128.0" promptText="Enter Time" />
+                        <Button fx:id="checkEditAvailabilityButton" layoutX="97.0" layoutY="144.0" mnemonicParsing="false" onAction="#checkEditAvailability" text="Check" />
+                        <Button fx:id="closeEditPaneButton" layoutX="22.0" layoutY="191.0" mnemonicParsing="false" onAction="#closeEditPane" text="Close" />
+                        <Button fx:id="confirmEditButton" layoutX="95.0" layoutY="191.0" mnemonicParsing="false" onAction="#confirmEditBooking" text="Confirm" />
+                     </children>
+                  </Pane>
+                  <Button fx:id="loadBookings" layoutX="486.0" layoutY="365.0" mnemonicParsing="false" text="Load" />
                </children>
             </AnchorPane>
          </children>
